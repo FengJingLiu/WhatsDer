@@ -1,0 +1,54 @@
+## IDF Component Manager Manifest File
+targets:
+  - esp32s3
+
+dependencies:
+  espressif/esp-idf-cxx: "^1.0.2-beta"
+  idf: ">=5.0.1"
+
+  esp_lcd_touch_gt1151:
+    version: "^1"
+    public: true
+
+  esp_lcd_touch_ft5x06:
+    version: "^1"
+    public: true
+
+  esp_io_expander_tca9554:
+    version: "^1"
+    public: true
+
+  lvgl/lvgl:
+    version: "^8.3.11"
+    public: true
+
+  esp_lcd_panel_io_additions:
+    version: "^1"
+    public: true
+
+  esp_lcd_gc9503:
+    matches:
+      - if: "idf_version <5.1.2"
+        version: "^1"
+      - if: "idf_version >=5.1.2"
+        version: "^3"
+    public: true
+
+  esp_codec_dev:
+    version: "^1"
+    public: true
+
+  button:
+    version: ">=2.5,<4.0"
+    public: true
+  # # Put list of dependencies here
+  # # For components maintained by Espressif:
+  # component: "~1.0.0"
+  # # For 3rd party components:
+  # username/component: ">=1.0.0,<2.0.0"
+  # username2/component2:
+  #   version: "~1.0.0"
+  #   # For transient dependencies `public` flag can be set.
+  #   # `public` flag doesn't have an effect dependencies of the `main` component.
+  #   # All dependencies of `main` are public by default.
+  #   public: true

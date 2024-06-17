@@ -1,0 +1,9 @@
+#pragma once
+
+/* baidu vop */
+#define VOP_CLIENT_ID "C7UHcBu62dTzrJh7S64SSlap"
+#define VOP_TOLEN "24.f82a06f14854c0bdda61aacb92b54e11.2592000.1720855500.282335-75882674"
+#define VOP_CLIENT_SECRET "tyySegR96kdrd4UkOTEBUwGPOFgYmAGl"
+
+/* openai */
+#define CONFIG_YYDS_API_KEY "Bearer sk-zZJp4fKNGUeTQLfhDdFc8aBd324243E797B773Ac5881519f"

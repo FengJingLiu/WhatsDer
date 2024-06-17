@@ -1,0 +1,2 @@
+xtensa-esp32-elf-gdb -x gdbinit build/recorder_demo.elf
+idf.py gdbtui --gdbinit gdbinit
