@@ -9,7 +9,7 @@
 
 #include "audio.h"
 #include "../hal/hal.h"
-#include "requests.h"
+#include "requests_old.h"
 
 static char *TAG = "audio";
 
@@ -66,11 +66,11 @@ void record_start()
 
         char* vop_rsp_buffer = (char*)heap_caps_malloc(2048, MALLOC_CAP_SPIRAM);
         assert(vop_rsp_buffer != NULL);
-        req_vop(recording_buffer, vop_rsp_buffer, buffer_size);
+        baidu_req_vop(recording_buffer, vop_rsp_buffer, buffer_size);
         ESP_LOGI(TAG, "vop response is: %s", vop_rsp_buffer);
 
         char* gpt_rsp_buffer = (char*)heap_caps_malloc(2048, MALLOC_CAP_SPIRAM);
-        req_gpt_text(vop_rsp_buffer, gpt_rsp_buffer, strlen(vop_rsp_buffer));
+        openai_req_text(vop_rsp_buffer, gpt_rsp_buffer, strlen(vop_rsp_buffer));
         ESP_LOGI(TAG, "gpt response is: %s", gpt_rsp_buffer);
         free(vop_rsp_buffer);
         free(gpt_rsp_buffer);

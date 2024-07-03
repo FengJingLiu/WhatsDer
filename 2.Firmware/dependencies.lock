@@ -1,10 +1,22 @@
 dependencies:
+  esp_camera:
+    component_hash: null
+    source:
+      path: C:\project\embedded\WhatsDer\2.Firmware\components\esp_camera
+      type: local
+    version: 2.0.9
+  esp_lvgl_port:
+    component_hash: null
+    source:
+      path: C:\project\embedded\WhatsDer\2.Firmware\components\esp_lvgl_port
+      type: local
+    version: 2.2.2
   espressif/button:
-    component_hash: 1f5297fe16f0ee988dbb14b6f4c91782fe2baf85025bb15cc1e0093edd3fb2ee
+    component_hash: 16a2f5c573e5b6bac30565fdd4b20a155f24a4b438ae1a3cced89ea84ddce7ae
     source:
       service_url: https://api.components.espressif.com/
       type: service
-    version: 3.2.0
+    version: 3.2.1
   espressif/cmake_utilities:
     component_hash: 351350613ceafba240b761b4ea991e0f231ac7a9f59a9ee901f751bddc0bb18f
     source:
@@ -35,36 +47,18 @@ dependencies:
       service_url: https://api.components.espressif.com/
       type: service
     version: 1.0.1
-  espressif/esp_lcd_gc9503:
-    component_hash: 6940bf99cd08e7e8eb7ad5efbe88ebf9cc8eeb975fcf1c815d120956d06be940
+  espressif/esp_websocket_client:
+    component_hash: ae561d39222a399ddda5e470913c3d54a3c0f53dce15b8d21a3aaa4226dd74b1
     source:
       service_url: https://api.components.espressif.com/
       type: service
-    version: 3.0.1
-  espressif/esp_lcd_panel_io_additions:
-    component_hash: 213d5c4a3c322a48c9f993d6bc2372206d34af95db34e87a3e02601bdcad7ce8
+    version: 1.2.3
+  espressif/knob:
+    component_hash: 82be300874487955cfe47254eebbc1100f6d7d66b647df4bd71e0c0af836d73b
     source:
       service_url: https://api.components.espressif.com/
       type: service
-    version: 1.0.1
-  espressif/esp_lcd_touch:
-    component_hash: 779b4ba2464a3ae85681e4b860caa5fdc35801458c23f3039ee761bae7f442a4
-    source:
-      service_url: https://api.components.espressif.com/
-      type: service
-    version: 1.1.2
-  espressif/esp_lcd_touch_ft5x06:
-    component_hash: 97759953d9436a365e9427078c5b04ecce4e6a50f50cf62c68cd6bfa229b812c
-    source:
-      service_url: https://api.components.espressif.com/
-      type: service
-    version: 1.0.6
-  espressif/esp_lcd_touch_gt1151:
-    component_hash: b854694702b8687dc0a456017d4a292f8ddfa3cb8ad2faa282fabbb989e6fd26
-    source:
-      service_url: https://api.components.espressif.com/
-      type: service
-    version: 1.0.5~1
+    version: 0.1.4
   idf:
     component_hash: null
     source:
@@ -76,6 +70,6 @@ dependencies:
       service_url: https://api.components.espressif.com/
       type: service
     version: 8.4.0
-manifest_hash: 8a6f706fbceacd994e5c98a072643e1da437622fcc69ef8ce950ff4e75e05e3d
+manifest_hash: ae9555e6326c360b22ce53d2d99266c0777b0c58b04ac44eb512666f838b3492
 target: esp32s3
 version: 1.0.0

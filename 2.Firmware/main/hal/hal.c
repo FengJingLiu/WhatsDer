@@ -4,6 +4,7 @@
 #include "esp_err.h"
 #include "nvs_flash.h"
 #include "driver/i2c.h"
+#include "driver/i2c_master.h"
 
 #include "../common/config.h"
 #include "../common/err_check.h"
@@ -53,11 +54,17 @@ esp_err_t hal_nvs_init(void)
 
 void hal_all_init(void)
 {
+    ESP_ERROR_CHECK(esp_netif_init());
+    ESP_ERROR_CHECK(esp_event_loop_create_default());
+    
+    hal_nvs_init();
+    hal_wifi_init();
+
     hal_i2c_init();
+    hal_screen_init();
+    // hal_cam_init();
+    
     hal_audio_init(NULL);
     hal_mic_init();
     hal_spk_init();
-
-    hal_nvs_init();
-    hal_wifi_init();
 }
